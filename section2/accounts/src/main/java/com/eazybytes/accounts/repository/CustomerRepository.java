@@ -9,6 +9,11 @@ import java.util.Optional;
 @Repository
 public interface CustomerRepository extends JpaRepository<Customer, Long> {
 
+    /**
+     * Find the customer by mobile number.
+     * @param mobileNumber - String of the mobile number
+     * @return Optional<Customer> of the target customer
+     */
     Optional<Customer> findByMobileNumber(String mobileNumber);
 
 }
